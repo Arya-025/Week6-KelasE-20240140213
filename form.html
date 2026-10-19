@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulir Jual Motor — Titip Jual / Estimasi Harga</title>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Bursa Motor</a>
+    <a href="form.html" aria-current="page">Jual Motor</a>
+  </nav>
+
+  <header>
+    <div class="eyebrow">Showroom No. 02 — Counter Penjualan</div>
+    <h1>Formulir Jual Motor</h1>
+    <p>masukkan spesifikasi motor Anda untuk estimasi harga dan publikasi iklan</p>
+  </header>
+
+  <main>
+    <form id="form" novalidate>
+      <label for="nama">Nama / Merek Motor</label>
+      <input type="text" id="nama" placeholder="contoh: Honda Vario 160 CBS" aria-describedby="nama-error">
+      <small class="error" id="nama-error" aria-live="polite"></small>
+
+      <label for="harga">Harga Harapan (Rp)</label>
+      <input type="number" id="harga" placeholder="contoh: 22000000" aria-describedby="harga-error">
+      <small class="error" id="harga-error" aria-live="polite"></small>
+
+      <label for="template">Pilih Template Deskripsi Iklan</label>
+      <select id="template">
+        <option value="gercep">Cepat Laku (Gercep)</option>
+        <option value="spesifikasi">Detail Spesifikasi</option>
+        <option value="nego">Santai / Bisa Nego</option>
+      </select>
+
+      <button type="submit">Generate Iklan Motor</button>
+
+      <label for="caption">Hasil Draf Iklan</label>
+      <textarea id="caption" rows="14" readonly></textarea>
+    </form>
+  </main>
+
+  <footer>
+    motor marketplace generator &middot; dibuat dengan HTML + JS native
+  </footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>
